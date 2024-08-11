@@ -31,7 +31,7 @@ function App() {
     }
 
     if (new Date(dob) > new Date()) {
-      alert("Invalid Date of Birth. Please enter a valid past date.");
+      alert("Invalid date of birth. Date of birth cannot be in the future");
       return false;
     }
 
@@ -41,7 +41,7 @@ function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (validateForm()) {
-      handleClose(); // Close the modal if form is valid
+      handleClose();
     }
   };
 
@@ -143,7 +143,7 @@ function App() {
                   Phone Number:
                 </label>
                 <input
-                  type="text"
+                  type="tel"
                   id="phone"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
